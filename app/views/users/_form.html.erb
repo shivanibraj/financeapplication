@@ -1,0 +1,18 @@
+<%= simple_form_for @user do |p| %>
+  <p>
+ <b><%= p.label :'NAME:',:class => 'spacinga'%></b>
+  <%= p.text_field :name ,required:true ,placeholder:"ENTER NAME OF THE USER ",:class => 'form-control'%></b>
+</p>
+<p>
+ <b>  <%= p.label :'Email :',:class => 'spacinga'%></b>
+  <%= p.text_field :Email, as: :text, placeholder: "ENTER EMAILID",:class => 'form-control'%></b>
+  </p>
+  <p>
+ <b><%= p.label :'BANLANCE:',:class => 'spacinga'%></b>
+  <%= p.text_field :balance ,required:true ,placeholder:"ENTER EMAILID ",:class => 'form-control'%></b>
+</p>
+<div class ="spacinga">
+  <%= p.button :submit, :class=> "btn btn-sm btn-primary " %>
+   
+
+<% end %>

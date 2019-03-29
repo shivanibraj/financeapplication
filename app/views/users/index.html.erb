@@ -1,0 +1,35 @@
+<h1>Add new user </h1>
+<p class="float-right">
+  <%= link_to "Add user", new_user_path, class: "btn btn-md btn-primary" %>
+</p>
+  <table class="table table-hover table-bordered table-striped ">
+    <thead>
+      <tr>
+        <th>Sl No.</th>
+        <th>Name</th>
+        <th>email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each_with_index do |user, index| %>
+        <tr>
+          <td><%= index + 1 %></td>  
+          <td><%= user.name %></td>
+          <td><%= user.email %></td>
+          <td>
+            <div>
+              <%= link_to "Show", user_path(user), 
+                class: "btn btn-sm btn-success" %>
+              <%= link_to "Edit", edit_user_path(user), 
+                class: "btn btn-sm btn-primary" %>
+              <%= link_to "Remove",user_path(user), method: 'delete',
+                class: "btn btn-sm btn-danger", data: { confirm: 'Are you sure?' } %>
+            </div>
+          </td>
+        </tr>
+      <% end %> 
+    </tbody>
+  </table>
+<% else %>
+  <center><h3>No tags found to be shown here!</h3></center>

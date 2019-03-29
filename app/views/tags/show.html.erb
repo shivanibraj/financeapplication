@@ -1,0 +1,17 @@
+<center><h3> Tag Details </h3> </center>
+<hr>
+
+<div class="col-md-8">
+  <table class="table table-striped">
+  <tr>
+    <th>Tag code</th>
+    <td><%= @tag.code %></td>
+  </tr> 
+  <tr>
+    <th>Name</th>
+    <td><%= @tag.name %></td>
+  </tr>
+  </table> 
+</div>
+
+<%= link_to 'Back', tags_path,class: "ml-2 btn btn-sm btn-primary" %></div>

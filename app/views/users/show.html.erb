@@ -1,0 +1,21 @@
+<center><h3> User Details </h3> </center>
+<hr>
+
+<div class="col-md-8">
+  <table class="table table-striped">
+  <tr>
+    <th>user name</th>
+    <td><%= @user.name %></td>
+  </tr> 
+  <tr>
+    <th>Emailid</th>
+    <td><%= @user.email %></td>
+  </tr>
+  <tr>
+    <th>Balance</th>
+    <td><%= @user.balance %></td>
+  </tr>
+  </table> 
+</div>
+
+<%= link_to 'Back', tags_path,class: "ml-2 btn btn-sm btn-primary" %></div>

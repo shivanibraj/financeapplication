@@ -1,0 +1,15 @@
+<%= simple_form_for @tag do |p| %>
+  <p>
+ <b><%= p.label :'Code:',:class => 'spacinga'%></b>
+  <%= p.text_field :code ,required:true ,placeholder:"ENTER CODE OF THE TAG ",:class => 'form-control'%></b>
+</p>
+<p>
+ <b>  <%= p.label :'Name :',:class => 'spacinga'%></b>
+  <%= p.text_field :name, as: :text, placeholder: "ENTER NAME OF THE TAG",:class => 'form-control'%></b>
+  </p>
+ 
+<div class ="spacinga">
+  <%= p.button :submit, :class=> "btn btn-sm btn-primary " %>
+   
+
+<% end %>
